@@ -4,13 +4,10 @@
 //  выводить в консоль сообщение в формате[номер элемента]-[значение элемента]
 // нумерация должна начинаться с 1 (для[0] будет 1  и т.д.)
 
-
-
-const logItems = function (array) {
-   for (let i = 0; i < array.length; i++) {
-       console.log(`${i+1}-${array[i]}`)
-       
-    }
+const logItems = function (array: string[] | number[]): void {
+	for (let i = 0; i < array.length; i++) {
+		console.log(`${i + 1}-${array[i]}`);
+	}
 };
 
 logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);

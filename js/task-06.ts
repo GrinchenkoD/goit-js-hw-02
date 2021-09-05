@@ -6,27 +6,27 @@
 //     -посчитать сумму всех элементов массива и записать ее в переменную total
 //     -в консоль выведи строку 'Общая сумма чисел равна [сумма]'
 
-let input;
-const numbers = [];
-let total = 0;
+let input: string | number;
+const numbers: number[] = [];
+let total: number = 0;
 
 do {
-  input = prompt('Введите число');
+	input = prompt('Введите число');
 
-  if (input === null) {
-    for (const number of numbers) {
-      total += number;
-    }
-    console.log(`Общая сумма чисел равна ${total}`);
-    break;
-  }
-  input = Number(input);
+	if (input === null) {
+		for (const number of numbers) {
+			total += number;
+		}
+		console.log(`Общая сумма чисел равна ${total}`);
+		break;
+	}
+	input = Number(input);
 
-  const notANumber = Number.isNaN(input);
+	const notANumber = Number.isNaN(input);
 
-  if (notANumber) {
-    alert('Было введено не число, попробуйте еще раз');
-    continue;
-  }
-  numbers.push(input);
+	if (notANumber) {
+		alert('Было введено не число, попробуйте еще раз');
+		continue;
+	}
+	numbers.push(input);
 } while (input !== null);
